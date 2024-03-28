@@ -14,3 +14,8 @@ after_success:
   - docker build -t niniko123/ninikona-worker ./worker
   - docker build -t niniko123/ninikona-server ./server
   - docker build -t niniko123/ninikona-nginx ./nginx
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+  - docker push niniko123/ninikona-client
+  - docker push niniko123/ninikona-worker
+  - docker push niniko123/ninikona-server
+  - docker push niniko123/ninikona-nginx
