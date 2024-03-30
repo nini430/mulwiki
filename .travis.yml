@@ -19,3 +19,15 @@ after_success:
   - docker push niniko123/ninikona-worker
   - docker push niniko123/ninikona-server
   - docker push niniko123/ninikona-nginx
+
+deploy:
+  provider: elasticbeanstalk
+  region: us-east-2
+  app: multi-docker
+  env: Multi-docker-env
+  bucket_name: elasticbeanstalk-us-east-2-992382386439
+  bucket_path: multi-docker
+  on:
+    branches: master
+  access_key_id: $AWS_ACCESS_KEY
+  access_secret_key: "$AWS_SECRET_KEY"
