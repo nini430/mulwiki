@@ -1,7 +1,7 @@
 version: '3'
 services:
   client:
-    image: 'niniko123/niniko-client'
+    image: 'niniko123/ninikona-client'
     mem_limit: 128m
     hostname: client
   api:

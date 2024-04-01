@@ -6,6 +6,7 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">
+        <h2>tamila</h2>
         <Link to="/">HOme</Link>
         <Link to='/other'>Other</Link>
         <Routes>
